@@ -571,7 +571,7 @@ const updatePointers = event => {
                         const dltDst = distance - twDst[0];
                         const dltAgl = angle - twAgl[0];
 
-                        angle(`${Math.round(dltAgl)}, ${Math.round(play(dltAgl, twAglPlay))}`);
+                        announce(`${Math.round(dltAgl)}, ${Math.round(play(dltAgl, twAglPlay))}`);
 
                         if (isFinite(dltAgl) && Math.abs(dltAgl) >= twAglPlay) { // 回転
                             rotateCanvas(play(dltAgl, twAglPlay));
