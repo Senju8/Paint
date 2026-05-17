@@ -545,6 +545,8 @@ const updatePointers = event => {
             if (mainPointerId && subPointerId === event.pointerId) {
                 const mainPointer = pointers.get(mainPointerId);
 
+                announce(mainPointer);
+
                 if (mainPointer) {
                     const x = (mainPointer.offsetX + event.offsetX) / 2;
                     const y = (mainPointer.offsetY + event.offsetY) / 2;
