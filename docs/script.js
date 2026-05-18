@@ -549,7 +549,7 @@ const updatePointers = event => {
                 if (mainPointer) {
                     const x = (mainPointer.offsetX + subPointer.offsetX) / 2;
                     const y = (mainPointer.offsetY + subPointer.offsetY) / 2;
-                    const distance = Math.hypot(subPointer.offsetX - mainPointer.offsetX + subPointer.offsetY - mainPointer.offsetY);
+                    const distance = Math.hypot(subPointer.offsetX - mainPointer.offsetX, subPointer.offsetY - mainPointer.offsetY);
                     const angle = Math.acos((subPointer.offsetX - mainPointer.offsetX) / distance) * 180 / Math.PI;
 
                     trajectories.push(x, y);
